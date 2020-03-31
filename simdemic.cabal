@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 92d7781243d230578cafb44cb33672de0f0e6bc3183be65c81f061bbd3cbbf59
+-- hash: 159af2cb7604e791df512d681e12a66d91b6ebeab46544536ffb773dfb5cf020
 
 name:           simdemic
 version:        0.1.0.0
@@ -27,13 +27,14 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Graphics
   other-modules:
       Paths_simdemic
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , gloss >=1.13 && <1.14
   default-language: Haskell2010
 
 executable simdemic-exe
@@ -45,6 +46,7 @@ executable simdemic-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , gloss >=1.13 && <1.14
     , simdemic
   default-language: Haskell2010
 
@@ -58,5 +60,6 @@ test-suite simdemic-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , gloss >=1.13 && <1.14
     , simdemic
   default-language: Haskell2010
